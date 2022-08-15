@@ -1,6 +1,6 @@
 {
   "apps": [{
-    "name": "firekylin",
+    "name": "blog",
     "script": "production.js",
     "cwd": "/root/blog",
     "exec_mode": "fork",
