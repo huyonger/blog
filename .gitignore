@@ -32,7 +32,7 @@ node_modules
 .tmp
 
 # Image upload folder
-www/static/images/upload/*
+# www/static/images/upload/*
 
 # Database Config
 src/common/config/db.js
@@ -44,7 +44,7 @@ release/
 .DS_Store
 
 runtime/
-www/static/upload/
+# www/static/upload/
 
 output/
 output.theme/
