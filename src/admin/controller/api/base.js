@@ -30,20 +30,16 @@ module.exports = class extends BaseRest {
 
             let siteUrlHost = parse(site_url).host;
             let referrerHost = parse(referrer).host;
-            if (!siteUrlHost || !referrerHost) {
-                return this.fail('REFERRER_ERROR');
-            }
-
-            if (siteUrlHost.length < referrerHost.length) {
-                if (referrerHost.slice(-siteUrlHost.length) !== siteUrlHost) {
+            if (env !== 'development') {
+                if (!siteUrlHost || !referrerHost) {
                     return this.fail('REFERRER_ERROR');
                 }
-            } else {
-                // 开发环境siteUrl不进行判断
-                if (
-                    siteUrlHost.slice(-referrerHost.length) !== referrerHost &&
-                    env !== 'development'
-                ) {
+
+                if (siteUrlHost.length < referrerHost.length) {
+                    if (referrerHost.slice(-siteUrlHost.length) !== siteUrlHost) {
+                        return this.fail('REFERRER_ERROR');
+                    }
+                } else if (siteUrlHost.slice(-referrerHost.length) !== referrerHost) {
                     return this.fail('REFERRER_ERROR');
                 }
             }
