@@ -17,9 +17,10 @@ module.exports = [
         // enable: isDev,
         options: {
             root: path.join(think.ROOT_PATH, 'www'),
-            // cancel google verfify exclude
+            // cancel google verify exclude
+            // cancel sitemap verify exclude
             publicPath:
-                /^\/(static\/|theme\/|google.*\.html$|[^/]+\.(?!js|html|xml)\w+$)/,
+                /^\/(static\/|theme\/|google.*\.html$|sitemap.xml|[^/]+\.(?!js|html|xml)\w+$)/,
         },
     },
     {
