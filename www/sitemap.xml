@@ -1,152 +1,149 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<!--  created with sitemap generator https://octopus.do  -->
 
-
-<url>
-  <loc>http://www.imyoyo.xyz/</loc>
-  <lastmod>2022-08-18T09:02:16+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>http://www.imyoyo.xyz/archives/</loc>
-  <lastmod>2022-08-18T09:02:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.imyoyo.xyz/tags</loc>
-  <lastmod>2022-08-18T09:02:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.imyoyo.xyz/about</loc>
-  <lastmod>2022-08-18T09:02:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.imyoyo.xyz/links</loc>
-  <lastmod>2022-08-18T09:02:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.imyoyo.xyz/rss.html</loc>
-  <lastmod>2022-08-18T09:02:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.imyoyo.xyz/search.html</loc>
-  <lastmod>2022-08-18T09:02:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.imyoyo.xyz/about/</loc>
-  <lastmod>2022-08-18T09:02:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.imyoyo.xyz/post/CDN-jia-su-sui-bi.html</loc>
-  <lastmod>2022-08-18T09:02:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.imyoyo.xyz/post/github%20push-tai-man-sui-bi.html</loc>
-  <lastmod>2022-08-18T09:02:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.imyoyo.xyz/post/tong-guo-Git%20Hooks-shi-xian-zi-dong-bu-shu.html</loc>
-  <lastmod>2022-08-18T09:02:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.imyoyo.xyz/post/guan-yu-firekylin-hou-tai-she-zhi-chu-xian-%E2%80%9CREFERRER_ERROR%E2%80%9D-de-wen-ti-jie-jue.html</loc>
-  <lastmod>2022-08-18T09:02:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.imyoyo.xyz/post/hello-world-via-firekylin.html</loc>
-  <lastmod>2022-08-18T09:02:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.imyoyo.xyz/archives</loc>
-  <lastmod>2022-08-18T09:02:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.imyoyo.xyz/tag/FE</loc>
-  <lastmod>2022-08-18T09:02:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.imyoyo.xyz/tag/Network</loc>
-  <lastmod>2022-08-18T09:02:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.imyoyo.xyz/tag/DevOps</loc>
-  <lastmod>2022-08-18T09:02:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.imyoyo.xyz/admin/page/create?pathname=about</loc>
-  <lastmod>2022-08-18T09:02:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.imyoyo.xyz/search.html?keyword=%E5%89%8D%E7%AB%AF</loc>
-  <lastmod>2022-08-18T09:02:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.imyoyo.xyz/search.html?keyword=%E7%BD%91%E7%BB%9C</loc>
-  <lastmod>2022-08-18T09:02:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.imyoyo.xyz/search.html?keyword=%E8%BF%90%E7%BB%B4</loc>
-  <lastmod>2022-08-18T09:02:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.imyoyo.xyz/author/YongHub</loc>
-  <lastmod>2022-08-18T09:02:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.imyoyo.xyz/admin</loc>
-  <lastmod>2022-08-18T09:02:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.imyoyo.xyz/admin/options/</loc>
-  <lastmod>2022-08-18T09:02:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.imyoyo.xyz/admin/options/general</loc>
-  <lastmod>2022-08-18T09:02:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.imyoyo.xyz/admin/options/comment</loc>
-  <lastmod>2022-08-18T09:02:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.imyoyo.xyz/admin/appearance/navigation</loc>
-  <lastmod>2022-08-18T09:02:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.imyoyo.xyz/author/admin</loc>
-  <lastmod>2022-08-18T09:02:16+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-
+    <url>
+        <loc>http://www.imyoyo.xyz</loc>
+        <lastmod>2022-08-19</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://www.imyoyo.xyz/about</loc>
+        <lastmod>2022-08-19</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://www.imyoyo.xyz/admin</loc>
+        <lastmod>2022-08-19</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://www.imyoyo.xyz/admin/options</loc>
+        <lastmod>2022-08-19</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://www.imyoyo.xyz/admin/options/comment</loc>
+        <lastmod>2022-08-19</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://www.imyoyo.xyz/admin/options/general</loc>
+        <lastmod>2022-08-19</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://www.imyoyo.xyz/admin/appearance/navigation</loc>
+        <lastmod>2022-08-19</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://www.imyoyo.xyz/admin/page/create</loc>
+        <lastmod>2022-08-19</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://www.imyoyo.xyz/archives</loc>
+        <lastmod>2022-08-19</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://www.imyoyo.xyz/links</loc>
+        <lastmod>2022-08-19</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://www.imyoyo.xyz/rss</loc>
+        <lastmod>2022-08-19</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://www.imyoyo.xyz/search</loc>
+        <lastmod>2022-08-19</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://www.imyoyo.xyz/tags</loc>
+        <lastmod>2022-08-19</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://www.imyoyo.xyz/post/cdn-jia-su-sui-bi</loc>
+        <lastmod>2022-08-19</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://www.imyoyo.xyz/post/github-push-tai-man-sui-bi</loc>
+        <lastmod>2022-08-19</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://www.imyoyo.xyz/post/guan-yu-firekylin-hou-tai-she-zhi-chu-xian-“referrer_error”-de-wen-ti-jie-jue</loc>
+        <lastmod>2022-08-19</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://www.imyoyo.xyz/post/hello-world-via-firekylin</loc>
+        <lastmod>2022-08-19</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://www.imyoyo.xyz/post/tong-guo-git-hooks-shi-xian-zi-dong-bu-shu</loc>
+        <lastmod>2022-08-19</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://www.imyoyo.xyz/post/admin/appearance</loc>
+        <lastmod>2022-08-19</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://www.imyoyo.xyz/tag/devops</loc>
+        <lastmod>2022-08-19</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://www.imyoyo.xyz/tag/fe</loc>
+        <lastmod>2022-08-19</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://www.imyoyo.xyz/tag/network</loc>
+        <lastmod>2022-08-19</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://www.imyoyo.xyz/author/admin</loc>
+        <lastmod>2022-08-19</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://www.imyoyo.xyz/author/yonghub</loc>
+        <lastmod>2022-08-19</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
 </urlset>
