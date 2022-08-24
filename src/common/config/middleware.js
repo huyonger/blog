@@ -20,7 +20,7 @@ module.exports = [
             // cancel google verify exclude
             // cancel sitemap verify exclude
             publicPath:
-                /^\/(static\/|theme\/|(google|baidu).*\.html$|sitemap.xml|[^/]+\.(?!js|html|xml)\w+$)/,
+                /^\/(static\/|theme\/|(google|baidu).*\.html$|[^/]+\.(?!js|html|xml)\w+$)/,
         },
     },
     {

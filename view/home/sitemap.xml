@@ -19,6 +19,7 @@
       <priority>0.5</priority>
   </url>
   {%- endif %}
+  {%- if tagList[0] %}
   {%- for item in tags %}
   {%- for pageNum in range(1, item.count / options.postsListSize + 1) %}
   <url>
@@ -28,6 +29,8 @@
   </url>
   {%- endfor %}
   {%- endfor %}
+  {%- endif %}
+  {%- if CategoryList[0] %}
   {%- for item in categories %}
   {%- for pageNum in range(1, item.count / options.postsListSize + 1) %}
   <url>
@@ -37,4 +40,5 @@
   </url>
   {%- endfor %}
   {%- endfor %}
+  {%- endif %}
 </urlset>
