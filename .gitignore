@@ -61,3 +61,6 @@ db/
 
 .eslintcache
 stats.json
+
+# request.http
+request.http
