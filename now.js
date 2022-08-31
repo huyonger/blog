@@ -2,6 +2,7 @@ const path = require('path');
 const Application = require('thinkjs');
 const Loader = require('thinkjs/lib/loader');
 
+
 class NowLoader extends Loader {
   writeConfig() { }
 }
