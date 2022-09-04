@@ -23,5 +23,5 @@ module.exports = [
     [/^post\/sitemap\/?$/i, 'post/sitemap'],
     [/^post\/([^/]+)\/?$/i, 'post/detail?pathname=:1'],
     ['opensearch.xml', 'index/opensearch'],
-    [/.*/, 'error/_404'],
+    [/^(?!admin).*/, 'error/_404'],
 ];

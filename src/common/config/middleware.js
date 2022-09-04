@@ -1,5 +1,6 @@
 const path = require('path');
 const routerREST = require('think-router-rest');
+const fs = require('fs');
 
 const isDev = think.env === 'development';
 
@@ -20,6 +21,17 @@ module.exports = [
             // cancel sitemap verify exclude
             publicPath:
                 /^\/(static\/|theme\/|(google|baidu).*\.html$|[^/]+\.(?!js|html|xml)\w+$)/,
+        },
+    },
+    {
+        handle: 'error',
+        options: {
+            error(err) {
+                if (think.isPrevent(err)) {
+                    return false;
+                }
+                console.error(err);
+            },
         },
     },
     // {
