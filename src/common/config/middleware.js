@@ -1,6 +1,5 @@
 const path = require('path');
 const routerREST = require('think-router-rest');
-const fs = require('fs');
 
 const isDev = think.env === 'development';
 
