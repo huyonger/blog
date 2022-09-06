@@ -18,8 +18,7 @@ module.exports = [
             root: path.join(think.ROOT_PATH, 'www'),
             // cancel google verify exclude
             // cancel sitemap verify exclude
-            publicPath:
-                /^\/(static\/|theme\/|(google|baidu).*\.html$|[^/]+\.(?!js|html|xml)\w+$)/,
+            publicPath: /^\/(static\/|theme\/|(google|baidu).*\.html$|[^/]+\.(?!js|html|xml)\w+$)/,
         },
     },
     {

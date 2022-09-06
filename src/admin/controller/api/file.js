@@ -177,8 +177,7 @@ module.exports = class extends Base {
         let resp = await getFileContent({
             url,
             headers: {
-                'User-Agent':
-                    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) Chrome/47.0.2526.111 Safari/537.36',
+                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) Chrome/47.0.2526.111 Safari/537.36',
             },
             strictSSL: false,
             timeout: 1000,
@@ -204,10 +203,7 @@ module.exports = class extends Base {
         await writeFileAsync(uploadPath, resp.body, 'binary');
 
         //after upload delete file
-        onFinish(
-            this.ctx.res,
-            () => think.isExist(uploadPath) && unlinkAsync(uploadPath),
-        );
+        onFinish(this.ctx.res, () => think.isExist(uploadPath) && unlinkAsync(uploadPath));
 
         return {
             name: path.basename(url),

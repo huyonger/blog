@@ -1,43 +1,41 @@
 module.exports = class extends think.Logic {
-  /**
-   * index action logic
-   * @return {} []
-   */
-  indexAction() {
-
-  }
-  /**
-   * detail action logic
-   * @return {[type]} [description]
-   */
-  detailAction() {
-    this.previewCheck();
-  }
-  /**
-   * page action logic
-   * @return {[type]} [description]
-   */
-  pageAction() {
-    this.previewCheck();
-  }
-
-  previewCheck() {
-    if(!this.isPost) {
-      return true;
+    /**
+     * index action logic
+     * @return {} []
+     */
+    indexAction() {}
+    /**
+     * detail action logic
+     * @return {[type]} [description]
+     */
+    detailAction() {
+        this.previewCheck();
+    }
+    /**
+     * page action logic
+     * @return {[type]} [description]
+     */
+    pageAction() {
+        this.previewCheck();
     }
 
-    let rules = {
-      preview: {
-        method: 'GET',
-        boolean: true
-      },
-      previewData: {
-        requiredIf: ['preview', true]
-      }
-    };
+    previewCheck() {
+        if (!this.isPost) {
+            return true;
+        }
 
-    if(!this.validate(rules)) {
-      this.ctx.throw(400);
+        let rules = {
+            preview: {
+                method: 'GET',
+                boolean: true,
+            },
+            previewData: {
+                requiredIf: ['preview', true],
+            },
+        };
+
+        if (!this.validate(rules)) {
+            this.ctx.throw(400);
+        }
     }
-  }
-}
+};

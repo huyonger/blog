@@ -79,12 +79,10 @@ module.exports = class extends Base {
         if (user_id) {
             where.user_id = user_id;
         }
-        return this.order('id DESC')
-            .where(where)
-            .limit(nums)
-            .setRelation(false)
-            .order('create_time DESC')
-            .select();
+        return this.order('id DESC').where(where).limit(nums)
+.setRelation(false)
+.order('create_time DESC')
+.select();
     }
 
     async afterUpdate(data, options) {
@@ -115,9 +113,7 @@ module.exports = class extends Base {
      */
     async updateAllPostSummaries() {
         // get all posts' id and mark down content
-        const posts = await this.field('id, markdown_content')
-            .setRelation(false)
-            .select();
+        const posts = await this.field('id, markdown_content').setRelation(false).select();
         const allPromises = [];
 
         if (posts.length > 0) {
@@ -147,9 +143,7 @@ module.exports = class extends Base {
         if (!postTocManual) {
             showToc = data.type / 1 === 0;
         } else {
-            showToc = /(?:^|[\r\n]+)\s*<!--toc-->\s*[\r\n]+/i.test(
-                data.markdown_content,
-            );
+            showToc = /(?:^|[\r\n]+)\s*<!--toc-->\s*[\r\n]+/i.test(data.markdown_content);
         }
         data.content = await this.markdownToHtml(data.markdown_content, {
             toc: showToc,
@@ -176,9 +170,7 @@ module.exports = class extends Base {
             summary_length = parseInt(options.auto_summary);
         }
 
-        const hasMoreTag = /(?:^|[\r\n]+)\s*<!--more-->\s*[\r\n]+/i.test(
-            markdown_content,
-        );
+        const hasMoreTag = /(?:^|[\r\n]+)\s*<!--more-->\s*[\r\n]+/i.test(markdown_content);
 
         if (hasMoreTag || summary_length === 0) {
             summary = markdown_content.split('<!--more-->')[0];
@@ -229,23 +221,15 @@ module.exports = class extends Base {
          * 增加 TOC 目录
          */
         if (option.toc) {
-            let tocContent = marked(toc(content).content).replace(
-                /<a\s+href="#([^"]+)">(.+)?<\/a>/g,
-                (a, b, c) => {
-                    return `<a href="#${this.generateTocName(c)}">${c}</a>`;
-                },
-            );
+            let tocContent = marked(toc(content).content).replace(/<a\s+href="#([^"]+)">(.+)?<\/a>/g, (a, b, c) => {
+                return `<a href="#${this.generateTocName(c)}">${c}</a>`;
+            });
 
-            markedContent = markedContent.replace(
-                /<h(\d)[^<>]*>(.*?)<\/h\1>/g,
-                (a, b, c) => {
-                    return `<h${b}><a id="${this.generateTocName(
-                        c,
-                    )}" class="anchor" href="#${this.generateTocName(
-                        c,
-                    )}"></a>${c}</h${b}>`;
-                },
-            );
+            markedContent = markedContent.replace(/<h(\d)[^<>]*>(.*?)<\/h\1>/g, (a, b, c) => {
+                return `<h${b}><a id="${this.generateTocName(c)}" class="anchor" href="#${this.generateTocName(
+                    c,
+                )}"></a>${c}</h${b}>`;
+            });
             markedContent = `<div class="toc">${tocContent}</div>${markedContent}`;
         }
 
@@ -262,10 +246,7 @@ module.exports = class extends Base {
                         .replace(/&lt;/g, '<')
                         .replace(/&quot;/g, '"')
                         .replace(/&amp;/g, '&');
-                    var result = highlight.highlightAuto(
-                        text,
-                        language ? [language] : undefined,
-                    );
+                    var result = highlight.highlightAuto(text, language ? [language] : undefined);
                     return `<pre><code class="hljs lang-${result.language}">${result.value}</code></pre>`;
                 },
             );
@@ -300,12 +281,9 @@ module.exports = class extends Base {
      * @return {String}      []
      */
     generateTocName(name) {
-        name = name
-            .trim()
-            .replace(/\s+/g, '')
-            .replace(/\)/g, '')
-            .replace(/[(,]/g, '-')
-            .toLowerCase();
+        name = name.trim().replace(/\s+/g, '').replace(/\)/g, '')
+.replace(/[(,]/g, '-')
+.toLowerCase();
         if (/^[\w-]+$/.test(name)) {
             return name;
         }

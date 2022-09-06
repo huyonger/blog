@@ -76,11 +76,7 @@ module.exports = class extends Base {
             let dbConfig = this.config('model', undefined, 'common');
             dbConfig = dbConfig[dbConfig.type];
             let isDBConfig =
-                think.isObject(dbConfig) &&
-                dbConfig.host &&
-                dbConfig.port &&
-                dbConfig.database &&
-                dbConfig.user;
+                think.isObject(dbConfig) && dbConfig.host && dbConfig.port && dbConfig.database && dbConfig.user;
 
             switch (step) {
                 case 1:
@@ -180,9 +176,7 @@ module.exports = class extends Base {
         user.create_ip = this.ctx.ip;
         user.last_login_ip = this.ctx.ip;
 
-        await this.model('user')
-            .where({ name: user.name, email: user.email, _logic: 'OR' })
-            .thenAdd(user);
+        await this.model('user').where({ name: user.name, email: user.email, _logic: 'OR' }).thenAdd(user);
         this.assign('message', 'success');
         this.display();
     }

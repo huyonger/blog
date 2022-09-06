@@ -9,6 +9,7 @@ module.exports = class extends Base {
     // 导入方法
     async uploadMethod(file, config) {
         const filename_abs = file.path;
+        // eslint-disable-next-line no-unused-vars
         const { secretId, secretKey, bucket, region, origin, _, prefix } = config;
         // 创建实例
         const cos = new COS({

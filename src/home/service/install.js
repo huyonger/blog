@@ -90,9 +90,7 @@ module.exports = class extends think.Service {
                         version = version[0];
                     }
 
-                    this.dbConfig.encoding = semver.gt(version, '5.5.3')
-                        ? 'utf8mb4'
-                        : 'utf8';
+                    this.dbConfig.encoding = semver.gt(version, '5.5.3') ? 'utf8mb4' : 'utf8';
                 } catch (e) {
                     this.dbConfig.encoding = 'utf8';
                 }
@@ -108,9 +106,7 @@ module.exports = class extends think.Service {
                 '\'',
         );
         if (think.isEmpty(dbExist)) {
-            await model
-                .query('CREATE DATABASE `' + this.dbConfig.database + '`')
-                .catch(() => {});
+            await model.query('CREATE DATABASE `' + this.dbConfig.database + '`').catch(() => {});
         }
 
         let dbFile = path.join(think.ROOT_PATH, 'firekylin.sql');
@@ -132,9 +128,7 @@ module.exports = class extends think.Service {
                 return true;
             })
             .join(' ');
-        content = content
-            .replace(/\/\*.*?\*\//g, '')
-            .replace(/fk_/g, this.dbConfig.prefix || '');
+        content = content.replace(/\/\*.*?\*\//g, '').replace(/fk_/g, this.dbConfig.prefix || '');
 
         //导入数据
         model = this.getModel();
@@ -149,9 +143,7 @@ module.exports = class extends think.Service {
             }
         } catch (e) {
             think.logger.error(e);
-            return Promise.reject(
-                '数据表导入失败，请在控制台下查看具体的错误信息，并在 GitHub 上发 issue。',
-            );
+            return Promise.reject('数据表导入失败，请在控制台下查看具体的错误信息，并在 GitHub 上发 issue。');
         }
 
         let optionsModel = this.getModel('options');
@@ -269,18 +261,14 @@ exports.default = ${JSON.stringify(data, undefined, 4)}
             let existTables = await think
                 .model('user', dbConfig)
                 .query(
-                    'SELECT `TABLE_NAME` FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=\'' +
-                        database +
-                        '\'',
+                    'SELECT `TABLE_NAME` FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_SCHEMA`=\'' + database + '\'',
                 );
             if (think.isEmpty(existTables)) {
                 return false;
             }
 
             existTables = existTables.map((table) => table.TABLE_NAME);
-            let installed = tables.every(
-                (table) => existTables.indexOf(prefix + table) > -1,
-            );
+            let installed = tables.every((table) => existTables.indexOf(prefix + table) > -1);
             if (installed) {
                 firekylin.setInstalled();
             }

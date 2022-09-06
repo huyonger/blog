@@ -18,7 +18,8 @@
     "check-extraneous-pkgs": "npm list --depth=0 && echo '[SUCCESS] No extraneous packages.' || (echo '[INFO] Pruning extraneous packages...\n' && npm prune)",
     "cron:rss": "npm start -- \"admin/cron/rss\"",
     "cron:comment": "npm start -- \"crontab/sync_comment\"",
-    "build:pkg": "pkg . --out-path=dist/"
+    "build:pkg": "pkg . --out-path=dist/",
+    "prettier": "prettier --config .prettierrc --write './src/**/*.js'"
   },
   "pre-commit": [
     "lint-break-on-errors"
@@ -43,6 +44,7 @@
     "nodemailer": "^6.6.1",
     "on-finished": "^2.3.0",
     "phpass": "^0.1.1",
+    "prettier": "^2.7.1",
     "push-to-firekylin": "^0.2.3",
     "qiniu": "^7.3.0",
     "react-hot-loader": "^4.7.2",

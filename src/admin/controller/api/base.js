@@ -6,13 +6,7 @@ const env = think.env;
 module.exports = class extends BaseRest {
     constructor(...args) {
         super(...args);
-        this.allowList = [
-            'api/post/put',
-            'api/post/post',
-            'api/post/delete',
-            'api/file/post',
-            'api/file/get',
-        ];
+        this.allowList = ['api/post/put', 'api/post/post', 'api/post/delete', 'api/file/post', 'api/file/get'];
     }
 
     async __before() {
