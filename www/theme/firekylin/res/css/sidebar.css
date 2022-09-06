@@ -22,8 +22,8 @@
 }
 #sidebar .profile a,
 #sidebar .profile img {
-  width: 140px;
-  height: 140px;
+  width: 200px;
+  height: 200px;
   border-radius: 70px;
   overflow: hidden;
 }
@@ -32,12 +32,22 @@
   margin: 0 auto;
 }
 #sidebar .profile span {
+  font-weight: 400;
   display: block;
   padding: 10px 0;
-  font-size: 18px;
+  font-size: 30px;
   color: #999;
   text-align: center;
 }
+
+#sidebar .profile .subtitle {
+  display: block;
+  padding: 10px 0;
+  color: #999;
+  text-align: center;
+}
+
+
 #sidebar .buttons {
   margin: 0 0 20px;
 }
