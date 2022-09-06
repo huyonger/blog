@@ -4052,12 +4052,12 @@
   "resolved" "http://registry.npm.taobao.org/encodeurl/download/encodeurl-1.0.2.tgz"
   "version" "1.0.2"
 
-"encoding@^0.1.11":
-  "integrity" "sha1-U4tm8+5izRq1HsMjgp0flIDHS+s="
-  "resolved" "http://registry.npm.taobao.org/encoding/download/encoding-0.1.12.tgz"
-  "version" "0.1.12"
+"encoding@^0.1.0", "encoding@^0.1.11":
+  "integrity" "sha512-ETBauow1T35Y/WZMkio9jiM0Z5xjHHmJ4XmjZOq1l/dXz3lr2sRn87nJy20RupqSh1F2m3HHPSp8ShIPQJrJ3A=="
+  "resolved" "https://registry.npmjs.org/encoding/-/encoding-0.1.13.tgz"
+  "version" "0.1.13"
   dependencies:
-    "iconv-lite" "~0.4.13"
+    "iconv-lite" "^0.6.2"
 
 "end-of-stream@^1.0.0", "end-of-stream@^1.1.0":
   "integrity" "sha1-7SljTRm6ukY7bOa4CjchPqtx7EM="
@@ -5719,7 +5719,7 @@
   dependencies:
     "ms" "^2.0.0"
 
-"iconv-lite@^0.4.15", "iconv-lite@^0.4.17", "iconv-lite@~0.4.13", "iconv-lite@0.4.24":
+"iconv-lite@^0.4.15", "iconv-lite@^0.4.17", "iconv-lite@0.4.24":
   "integrity" "sha1-ICK0sl+93CHS9SSXSkdKr+czkIs="
   "resolved" "https://registry.npm.taobao.org/iconv-lite/download/iconv-lite-0.4.24.tgz"
   "version" "0.4.24"
@@ -5732,6 +5732,13 @@
   "version" "0.4.24"
   dependencies:
     "safer-buffer" ">= 2.1.2 < 3"
+
+"iconv-lite@^0.6.2":
+  "integrity" "sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw=="
+  "resolved" "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.6.3.tgz"
+  "version" "0.6.3"
+  dependencies:
+    "safer-buffer" ">= 2.1.2 < 3.0.0"
 
 "icss-replace-symbols@^1.1.0":
   "integrity" "sha1-Bupvg2ead0njhs/h/oEq5dsiPe0="
@@ -7840,12 +7847,19 @@
     "lower-case" "^1.1.1"
 
 "node-fetch@^1.0.1":
-  "integrity" "sha1-mA9vcthSEaU0fGsrwYxbhMPrR+8="
-  "resolved" "https://registry.npm.taobao.org/node-fetch/download/node-fetch-1.7.3.tgz"
+  "integrity" "sha512-NhZ4CsKx7cYm2vSrBAr2PvFOe6sWDf0UYLRqA6svUYg7+/TSfVAu49jYC4BvQ4Sms9SZgdqGBgroqfDhJdTyKQ=="
+  "resolved" "https://registry.npmjs.org/node-fetch/-/node-fetch-1.7.3.tgz"
   "version" "1.7.3"
   dependencies:
     "encoding" "^0.1.11"
     "is-stream" "^1.0.1"
+
+"node-fetch@^2.2.10":
+  "integrity" "sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ=="
+  "resolved" "https://registry.npmjs.org/node-fetch/-/node-fetch-2.6.7.tgz"
+  "version" "2.6.7"
+  dependencies:
+    "whatwg-url" "^5.0.0"
 
 "node-forge@0.7.5":
   "integrity" "sha1-bBUsNFzhHFL0ZcKr2VfoY5zWdN8="
@@ -10353,7 +10367,7 @@
   dependencies:
     "ret" "~0.1.10"
 
-"safer-buffer@^2.0.2", "safer-buffer@^2.1.0", "safer-buffer@>= 2.1.2 < 3", "safer-buffer@~2.1.0":
+"safer-buffer@^2.0.2", "safer-buffer@^2.1.0", "safer-buffer@>= 2.1.2 < 3", "safer-buffer@>= 2.1.2 < 3.0.0", "safer-buffer@~2.1.0":
   "integrity" "sha1-RPoWGwGHuVSd2Eu5GAL5vYOFzWo="
   "resolved" "https://registry.npm.taobao.org/safer-buffer/download/safer-buffer-2.1.2.tgz"
   "version" "2.1.2"
@@ -12439,8 +12453,8 @@
     "minimalistic-assert" "^1.0.0"
 
 "webidl-conversions@^3.0.0":
-  "integrity" "sha1-JFNCdeKnvGvnvIZhHMFq4KVlSHE="
-  "resolved" "http://registry.npm.taobao.org/webidl-conversions/download/webidl-conversions-3.0.1.tgz"
+  "integrity" "sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ=="
+  "resolved" "https://registry.npmjs.org/webidl-conversions/-/webidl-conversions-3.0.1.tgz"
   "version" "3.0.1"
 
 "webidl-conversions@^4.0.0", "webidl-conversions@^4.0.2":
@@ -12620,6 +12634,14 @@
   "integrity" "sha1-0pgaqRSMHgCkHFphMRZqtGg7vMA="
   "resolved" "http://registry.npm.taobao.org/whatwg-url/download/whatwg-url-4.8.0.tgz"
   "version" "4.8.0"
+  dependencies:
+    "tr46" "~0.0.3"
+    "webidl-conversions" "^3.0.0"
+
+"whatwg-url@^5.0.0":
+  "integrity" "sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw=="
+  "resolved" "https://registry.npmjs.org/whatwg-url/-/whatwg-url-5.0.0.tgz"
+  "version" "5.0.0"
   dependencies:
     "tr46" "~0.0.3"
     "webidl-conversions" "^3.0.0"

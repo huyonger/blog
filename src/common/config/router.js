@@ -18,11 +18,12 @@ module.exports = [
     [/^links\/?$/i, 'post/page?pathname=links'],
     [/^rss(?:\.xml)?\/?$/i, 'index/rss'],
     [/^sitemap(?:\.xml)?\/?$/i, 'index/sitemap'],
+    [/^url(?:\.txt)?\/?$/i, 'index/url'],
     [/^search\/?$/i, 'post/search'],
     [/^page\/([^/]+)\/?$/i, 'post/page?pathname=:1'],
     [/^post\/sitemap\/?$/i, 'post/sitemap'],
     [/^post\/([^/]+)\/?$/i, 'post/detail?pathname=:1'],
     [/^index\/install.*/, 'index/install'],
     ['opensearch.xml', 'index/opensearch'],
-    [/^(?!admin).*/, 'error/_404'],
+    [/^(?!(admin|crontab)).*/, 'error/_404'],
 ];

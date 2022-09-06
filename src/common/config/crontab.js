@@ -4,8 +4,13 @@ module.exports =
         : [
               {
                   type: 'one',
-                  interval: 1 * 60 * 1000,
+                  interval: 1000 * 60 * 10,
                   handle: 'crontab/sync_comment',
+              },
+              {
+                  type: 'one',
+                  interval: 1000 * 60 * 60 * 24,
+                  handle: 'crontab/baidu',
               },
               {
                   type: 'one',

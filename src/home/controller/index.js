@@ -57,6 +57,19 @@ module.exports = class extends Base {
         this.ctx.type = 'text/xml';
         return super.display(path.join(this.HOME_VIEW_PATH, 'sitemap.xml'));
     }
+
+    /**
+     * url action
+     * @return {[type]} [description]
+     */
+    async urlAction() {
+        let postModel = this.model('post');
+        let postList = await postModel.getPostSitemapList();
+        this.assign('postList', postList);
+        this.assign('origin', this.ctx.request.origin);
+        this.ctx.type = 'text/plain';
+        return super.display(path.join(this.HOME_VIEW_PATH, 'url.txt'));
+    }
     /**
      * install
      * @return {[type]} [description]
