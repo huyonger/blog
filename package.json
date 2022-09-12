@@ -19,7 +19,9 @@
     "cron:rss": "npm start -- \"admin/cron/rss\"",
     "cron:comment": "npm start -- \"crontab/sync_comment\"",
     "build:pkg": "pkg . --out-path=dist/",
-    "prettier": "prettier --config .prettierrc --write './src/**/*.js'"
+    "prettier": "prettier --config .prettierrc --write './src/**/*.js'",
+    "pingback-client": "python3 ./pingback/client.py",
+    "pingback-server": "python3 ./pingback/server.py"
   },
   "pre-commit": [
     "lint-break-on-errors"

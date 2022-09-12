@@ -3,7 +3,7 @@ const path = require('path');
 const Base = require('./base');
 
 const stats = think.promisify(fs.stat);
-
+const isDev = think.env === 'development';
 module.exports = class extends Base {
     /**
      * index action
@@ -140,6 +140,10 @@ module.exports = class extends Base {
             detail.featuredImage = '';
         }
         this.assign('post', detail);
+
+        const options = await this.model('options').getOptions();
+        const pingback = JSON.parse(options.pingback);
+        this.ctx.response.set('X-Pingback', isDev ? 'http://127.0.0.1:8362' : pingback.server);
 
         return this.displayView('post');
     }
