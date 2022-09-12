@@ -1,15 +1,37 @@
 {
-  "apps": [{
-    "name": "blog",
-    "script": "production.js",
-    "cwd": "/root/blog",
-    "exec_mode": "fork",
-    "max_memory_restart": "1G",
-    "autorestart": true,
-    "node_args": [],
-    "args": [],
-    "env": {
-      
+  "apps": [
+    {
+      "name": "blog",
+      "script": "production.js",
+      "cwd": "/root/blog",
+      "exec_mode": "fork",
+      "max_memory_restart": "1G",
+      "autorestart": true,
+      "node_args": [],
+      "args": [],
+      "env": {}
+    },
+    {
+      "name": "pingback_client",
+      "script": "client.py",
+      "cwd": "/root/blog/pingback",
+      "exec_interpreter": "/usr/bin/python3",
+      "exec_mode": "fork",
+      "autorestart": true,
+      "node_args": [],
+      "args": [],
+      "env": {}
+    },
+    {
+      "name": "pingback_server",
+      "script": "server.py",
+      "cwd": "/root/blog/pingback",
+      "exec_interpreter": "/usr/bin/python3",
+      "exec_mode": "fork",
+      "autorestart": true,
+      "node_args": [],
+      "args": [],
+      "env": {}
     }
-  }]
+  ]
 }
