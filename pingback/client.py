@@ -2,7 +2,6 @@ from http.server import HTTPServer, SimpleHTTPRequestHandler
 import xmlrpc.client
 import json
 host = ('localhost', 8361)
-data = {'result': 'this is a test'}
 
 class Resquest(SimpleHTTPRequestHandler):
     

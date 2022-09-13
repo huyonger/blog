@@ -9,7 +9,7 @@ module.exports =
               },
               {
                   type: 'one',
-                  interval: 1000 * 60 * 60 * 24,
+                  interval: 1000 * 60 * 30,
                   handle: 'crontab/baidu',
               },
               {
