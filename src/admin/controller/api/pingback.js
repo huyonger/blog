@@ -12,6 +12,15 @@ module.exports = class extends Base {
         const pingback = JSON.parse(options.pingback);
         const data = this.post();
         const params = [];
+
+        let timeoutPromise = async (timeout) => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve('');
+                }, timeout);
+            });
+        };
+
         //1.提取url链接
         // eslint-disable-next-line no-useless-escape
         const urls = (data.markdown_content.match(/.\[.*?\]\((.*?)\)/gms) || [])
@@ -26,13 +35,16 @@ module.exports = class extends Base {
             if (urls[i].endsWith('?pingback=true')) {
                 continue;
             }
-            const pingbackServer = await fetch(urls[i], agentOptions)
-                .then((res) => {
-                    return res.headers.get('X-Pingback') || '';
-                })
-                .catch((err) => {
-                    this.fail('pingback exist or error');
-                });
+            const pingbackServer = await Promise.race([
+                timeoutPromise(3000),
+                fetch(urls[i], agentOptions)
+                    .then((res) => {
+                        return res.headers.get('X-Pingback') || '';
+                    })
+                    .catch((err) => {
+                        this.fail('pingback exist or error');
+                    }),
+            ]);
             if (pingbackServer !== '') {
                 params.push({
                     pagelinkedfrom: `${this.ctx.request.origin}/post/${data.pathname}.html`,
