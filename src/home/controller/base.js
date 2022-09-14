@@ -2,6 +2,7 @@ const path = require('path');
 const pack = require('../../../package.json');
 
 const isPkg = think.env === 'pkg';
+const isDev = think.env === 'development';
 module.exports = class extends think.Controller {
     constructor(...args) {
         super(...args);
@@ -22,7 +23,20 @@ module.exports = class extends think.Controller {
         let model = this.model('options');
         let options = await model.getOptions();
         this.options = options;
-        let { navigation, themeConfig } = options;
+        let { navigation, themeConfig, preview_url } = options;
+
+        // 非cdn preview url
+        let referrer = this.ctx.request.origin;
+        if (think.isSameOrigin(referrer, preview_url && !isDev)) {
+            let userInfo = (await this.session('userInfo')) || {};
+            if (think.isEmpty(userInfo)) {
+                return this.redirect('/admin/login');
+            }
+            this.userInfo = userInfo;
+            if (!this.isAjax()) {
+                this.assign('userInfo', { id: userInfo.id, name: userInfo.name, type: userInfo.type });
+            }
+        }
         try {
             navigation = JSON.parse(navigation);
         } catch (e) {

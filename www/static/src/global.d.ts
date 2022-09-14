@@ -17,6 +17,7 @@ interface Window {
             favicon_url: string;
             description: string;
             site_url: string;
+            preview_url: string;
             keywords: string;
             github_url: string;
             twitter_url: string;

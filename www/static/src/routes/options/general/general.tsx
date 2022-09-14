@@ -140,19 +140,14 @@ class GeneralForm extends React.Component<GeneralProps, {}> {
                                 beforeUpload={this.beforeUpload}
                                 onChange={(e) => this.handleChange(e, 'logo')}
                             >
-                                {logoUrl ? (
-                                    <img src={logo_url} alt="avatar" />
-                                ) : (
-                                    uploadButton
-                                )}
+                                {logoUrl ? <img src={logo_url} alt="avatar" /> : uploadButton}
                             </Upload>
                             {getFieldDecorator('logo_url', {
                                 initialValue: logo_url,
                             })(
                                 <Input
                                     onChange={(e) => {
-                                        window.SysConfig.options.logo_url =
-                                            e.target.value;
+                                        window.SysConfig.options.logo_url = e.target.value;
                                         this.props.generalStore.setData({
                                             options: window.SysConfig.options,
                                         });
@@ -177,6 +172,11 @@ class GeneralForm extends React.Component<GeneralProps, {}> {
                                 initialValue: options.site_url,
                             })(<Input />)}
                         </FormItem>
+                        <FormItem {...formItemLayout} label="预览地址">
+                            {getFieldDecorator('preview_url', {
+                                initialValue: options.preview_url,
+                            })(<Input />)}
+                        </FormItem>
                         <FormItem {...formItemLayout} label="Favicon 地址">
                             <Upload
                                 name="file"
@@ -189,19 +189,14 @@ class GeneralForm extends React.Component<GeneralProps, {}> {
                                 beforeUpload={this.beforeUpload}
                                 onChange={(e) => this.handleChange(e, 'favicon')}
                             >
-                                {iconUrl ? (
-                                    <img src={favicon_url} alt="avatar" />
-                                ) : (
-                                    uploadButton
-                                )}
+                                {iconUrl ? <img src={favicon_url} alt="avatar" /> : uploadButton}
                             </Upload>
                             {getFieldDecorator('favicon_url', {
                                 initialValue: favicon_url,
                             })(
                                 <Input
                                     onChange={(e) => {
-                                        window.SysConfig.options.favicon_url =
-                                            e.target.value;
+                                        window.SysConfig.options.favicon_url = e.target.value;
                                         this.props.generalStore.setData({
                                             options: window.SysConfig.options,
                                         });
@@ -237,11 +232,7 @@ class GeneralForm extends React.Component<GeneralProps, {}> {
                             })(<Input />)}
                         </FormItem>
                         <FormItem {...tailFormItemLayout}>
-                            <Button
-                                type="primary"
-                                htmlType="submit"
-                                loading={loading.submit}
-                            >
+                            <Button type="primary" htmlType="submit" loading={loading.submit}>
                                 提交
                             </Button>
                         </FormItem>

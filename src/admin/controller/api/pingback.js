@@ -14,17 +14,25 @@ module.exports = class extends Base {
         const params = [];
         //1.提取url链接
         // eslint-disable-next-line no-useless-escape
-        const urls = data.markdown_content.match(/[^\!]{0,1}\[.*\]\((.*?)\)/gms).map((url) => {
-            return url.replace(/.*\[.*\]\((.*)\)/, '$1');
-        });
+        const urls = (data.markdown_content.match(/.\[.*?\]\((.*?)\)/gms) || [])
+            .filter((url) => {
+                return !url.startsWith('!');
+            })
+            .map((url) => {
+                return url.replace(/.*\[.*\]\((.*)\)/gms, '$1');
+            });
         //2.获取url对应pingback server
         for (let i = 0; i < urls.length; i++) {
             if (urls[i].endsWith('?pingback=true')) {
                 continue;
             }
-            const pingbackServer = await fetch(urls[i], agentOptions).then((res) => {
-                return res.headers.get('X-Pingback') || '';
-            });
+            const pingbackServer = await fetch(urls[i], agentOptions)
+                .then((res) => {
+                    return res.headers.get('X-Pingback') || '';
+                })
+                .catch((err) => {
+                    this.fail('pingback exist or error');
+                });
             if (pingbackServer !== '') {
                 params.push({
                     pagelinkedfrom: `${this.ctx.request.origin}/post/${data.pathname}.html`,
