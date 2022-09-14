@@ -36,7 +36,7 @@ module.exports = class extends Base {
                 continue;
             }
             const pingbackServer = await Promise.race([
-                timeoutPromise(3000),
+                timeoutPromise(10000),
                 fetch(urls[i], agentOptions)
                     .then((res) => {
                         return res.headers.get('X-Pingback') || '';
