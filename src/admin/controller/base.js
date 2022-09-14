@@ -1,6 +1,5 @@
 module.exports = class extends think.Controller {
     async __before() {
-        console.log('__before');
         const { controller, action } = this.ctx;
         if (controller === 'user' && action === 'login') {
             return;
@@ -19,8 +18,6 @@ module.exports = class extends think.Controller {
     }
 
     async __call() {
-        console.log('__call');
-
         if (this.isAjax()) {
             return this.fail('ACTION_NOT_FOUND');
         }

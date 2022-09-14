@@ -27,7 +27,7 @@ module.exports = class extends think.Controller {
 
         // 非cdn preview url
         let referrer = this.ctx.request.origin;
-        if (think.isSameOrigin(referrer, preview_url && !isDev)) {
+        if (think.isSameOrigin(referrer, preview_url) && !isDev) {
             let userInfo = (await this.session('userInfo')) || {};
             if (think.isEmpty(userInfo)) {
                 return this.redirect('/admin/login');
