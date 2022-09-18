@@ -143,7 +143,7 @@ module.exports = class extends Base {
 
         const options = await this.model('options').getOptions();
         const pingback = JSON.parse(options.pingback);
-        this.ctx.response.set('X-Pingback', isDev ? 'http://127.0.0.1:8362' : pingback.server);
+        this.ctx.append('X-Pingback', isDev ? 'http://127.0.0.1:8362' : pingback.server);
 
         return this.displayView('post');
     }
