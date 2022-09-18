@@ -23,7 +23,7 @@ module.exports = class extends Base {
         }
         const fileData = await readFileAsync(filename_abs);
         const { size } = await statAsync(filename_abs);
-        await putObjectAsync({
+        const { Location } = await putObjectAsync({
             Bucket: bucket,
             Region: region,
             Key: savePath,
@@ -31,9 +31,7 @@ module.exports = class extends Base {
             ContentLength: size,
         });
         // result.Location
-        const absOrigin = this.getAbsOrigin(origin);
-        const compeletePath = `${absOrigin}/${savePath}`;
-        return compeletePath;
+        return 'https://' + Location;
     }
 
     // 执行方法
