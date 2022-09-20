@@ -2619,8 +2619,6 @@
   "version" "2.1.1"
 
 "camelcase@^3.0.0":
-  "integrity" "sha1-MvxLn82vhF/N9+c7uXysImHwqwo="
-  "resolved" "https://registry.npm.taobao.org/camelcase/download/camelcase-3.0.0.tgz"
   "version" "3.0.0"
 
 "camelcase@^5.0.0":
@@ -2897,8 +2895,6 @@
     "wrap-ansi" "^2.0.0"
 
 "cliui@^3.2.0":
-  "integrity" "sha1-EgYBU3qRbSmUD5NNo7SNWFo5IT0="
-  "resolved" "https://registry.npm.taobao.org/cliui/download/cliui-3.2.0.tgz"
   "version" "3.2.0"
   dependencies:
     "string-width" "^1.0.1"
@@ -12720,8 +12716,6 @@
   "version" "0.1.4"
 
 "window-size@^0.2.0":
-  "integrity" "sha1-tDFbtCFKPXBY6+7okuE/ok2YsHU="
-  "resolved" "https://registry.npm.taobao.org/window-size/download/window-size-0.2.0.tgz"
   "version" "0.2.0"
 
 "window-size@0.1.0":
