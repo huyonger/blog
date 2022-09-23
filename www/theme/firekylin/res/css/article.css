@@ -326,6 +326,8 @@ article .entry-content pre code {
     min-width: 120px;
     padding: 6px;
     background: #fff;
+    position: relative;
+    z-index: 1000;
 }
 .toc::before {
     content: '文章目录';
