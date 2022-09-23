@@ -85,9 +85,9 @@ module.exports = class extends think.Service {
                     item.header[j] = await this._mathSpanRender(item.header[j]);
                 }
                 // 处理单元格
-                for (j = 0; j < item.cells.length; j++) {
-                    for (k = 0; k < item.cells[j].length; k++) {
-                        item.cells[j][k] = await this._mathSpanRender(item.cells[j][k]);
+                for (j = 0; j < item.rows.length; j++) {
+                    for (k = 0; k < item.rows[j].length; k++) {
+                        item.rows[j][k] = await this._mathSpanRender(item.rows[j][k]);
                     }
                 }
             }
