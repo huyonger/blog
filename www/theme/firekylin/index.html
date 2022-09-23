@@ -5,7 +5,8 @@
 {%- endblock %}
 
 {% block headers -%}
-<link rel="canonical" href="{{site_url}}/{% if tag %}tag/{{pathname}}{% elif cate %}cate/{{pathname}}{% endif %}{% if pagination.currentPage > 1 %}?page={{pagination.currentPage}}{% endif %}" />
+<link rel="canonical"
+  href="{{site_url}}/{% if tag %}tag/{{pathname}}{% elif cate %}cate/{{pathname}}{% endif %}{% if pagination.currentPage > 1 %}?page={{pagination.currentPage}}{% endif %}" />
 {%- endblock %}
 
 {% block content %}
@@ -21,17 +22,10 @@
   <article class="post">
     <div class="meta">
       <div>
-        {% if post.user %}
-          <span class="author">
-            {% set user = post.user %}
-            {% if user.display_name %}{{user.display_name}}{% else %}{{user.name}}{% endif %}
-          </span>
-          <span>发布于</span>
-        {% endif %}
         <span class="date">{{think.datetime(post.create_time, 'MM月DD, YYYY')}}</span>
       </div>
       <div class="comment">
-          <a href="/post/{{post.pathname}}.html#comments">{{post.comment_num}} comments</a>
+        <a href="/post/{{post.pathname}}.html#comments">{{post.comment_num}} comments</a>
       </div>
     </div>
 
@@ -42,7 +36,7 @@
     <div class="entry-content">
       {{post.summary | safe}}
       <p class="more">
-          <a href="/post/{{post.pathname}}.html">阅读全文 »</a>
+        <a href="/post/{{post.pathname}}.html">阅读全文 »</a>
       </p>
     </div>
 
