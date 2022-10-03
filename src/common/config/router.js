@@ -7,7 +7,7 @@ module.exports = [
     [/^tags(?:\.html|\.json)$/i, 'post/tag'],
     [/^search(?:\.html|\.json)$/i, 'post/search'],
     [/^page\/([^/]+)(?:\.html|\.json)$/i, 'post/page?pathname=:1'],
-    [/^post\/([^/]+)(?:\.html|\.json)$/i, 'post/detail?pathname=:1'],
+    [/^post\/([^/]+)(?:\.html|\.json|\.md)$/i, 'post/detail?pathname=:1'],
 
     [/^about\/?$/i, 'post/page?pathname=about'],
     [/^archives\/?$/i, 'post/archive'],

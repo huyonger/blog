@@ -122,7 +122,7 @@ module.exports = class extends think.Model {
      */
     async getPostDetail(pathname) {
         let where = this.getWhereCondition({ pathname });
-        let detail = await this.where(where).fieldReverse('markdown_content,summary').find();
+        let detail = await this.where(where).fieldReverse('summary').find();
         if (think.isEmpty(detail)) {
             return detail;
         }

@@ -126,8 +126,14 @@ module.exports = class extends Base {
                 // Ignore JSON parse error
             }
         }
-
         detail = detail || (await this.model('post').getPostDetail(pathname));
+
+        // markdown源文件
+        if (this.ctx.url.endsWith('.md')) {
+            this.ctx.body = detail.markdown_content;
+            return;
+        }
+
         if (think.isEmpty(detail)) {
             return this.redirect('/');
         }
