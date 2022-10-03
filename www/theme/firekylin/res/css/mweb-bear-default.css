@@ -241,12 +241,6 @@
 .entry-content ul > li {
     position: relative;
 }
-.entry-content ul > li:before {
-    content: '•';
-    color: #95afa3;
-    position: absolute;
-    left: -1.1em;
-}
 .entry-content ol > li {
     position: relative;
 }
