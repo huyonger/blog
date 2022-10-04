@@ -2,8 +2,8 @@
   "name": "firekylin",
   "bin": "pkg.js",
   "description": "A Simple & Fast Node Bloging Platform Base On ThinkJS 3.x & ReactJS & ES2015+",
-  "version": "1.4.0",
-  "author": "lizheming <i@imnerd.org>",
+  "version": "1.0.0",
+  "author": "huyong@bupt.edu.cn",
   "scripts": {
     "start": "node development.js",
     "copy-package": "node bin/copy_package.js",
@@ -23,7 +23,8 @@
     "pingback-client": "python3 ./pingback/client.py",
     "pingback-server": "python3 ./pingback/server.py",
     "prepare": "husky install",
-    "cm": "cz"
+    "cm": "cz",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "dependencies": {
     "ali-oss": "^6.2.1",
@@ -104,6 +105,8 @@
     "classnames": "^2.2.6",
     "codemirror": "^5.58.2",
     "commitizen": "^4.2.5",
+    "conventional-changelog": "^3.1.25",
+    "conventional-changelog-cli": "^2.2.2",
     "cross-env": "^5.2.0",
     "css-loader": "^1.0.0",
     "cz-conventional-changelog": "^3.3.0",
