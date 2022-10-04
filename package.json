@@ -21,11 +21,10 @@
     "build:pkg": "pkg . --out-path=dist/",
     "prettier": "prettier --config .prettierrc --write './src/**/*.js'",
     "pingback-client": "python3 ./pingback/client.py",
-    "pingback-server": "python3 ./pingback/server.py"
+    "pingback-server": "python3 ./pingback/server.py",
+    "prepare": "husky install",
+    "cm": "cz"
   },
-  "pre-commit": [
-    "lint-break-on-errors"
-  ],
   "dependencies": {
     "ali-oss": "^6.2.1",
     "aws-sdk": "^2.814.0",
@@ -73,6 +72,8 @@
     "xml2js": "^0.4.19"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
     "@types/classnames": "^2.2.6",
     "@types/codemirror": "0.0.60",
     "@types/history": "^4.7.0",
@@ -114,9 +115,11 @@
     "file-loader": "^1.1.11",
     "history": "^4.7.2",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^8.0.1",
     "immutability-helper": "^2.8.1",
     "less": "^3.8.0",
     "less-loader": "^4.1.0",
+    "lint-staged": "^13.0.3",
     "md5": "^2.0.0",
     "mobx": "^5.0.3",
     "mobx-react": "^5.2.3",
