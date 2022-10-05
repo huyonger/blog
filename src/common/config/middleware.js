@@ -32,6 +32,9 @@ module.exports = [
             },
         },
     },
+    {
+        handle: 'html-compress',
+    },
     // {
     //     handle: 'trace',
     //     enable: !think.isCli,

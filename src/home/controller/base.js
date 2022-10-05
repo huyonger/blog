@@ -108,7 +108,12 @@ module.exports = class extends think.Controller {
             this.ctx.body = jsonOutput;
             return true;
         }
-
+        //判断localStorage是否存在js和css缓存
+        if (this.cookie('v')) {
+            this.assign('localStorage', true);
+        } else {
+            this.assign('localStorage', false);
+        }
         return this.display(path.join(this.THEME_VIEW_PATH, name + '.html'));
     }
 };
