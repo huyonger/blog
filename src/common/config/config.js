@@ -6,9 +6,9 @@ const isDev = think.env === 'development';
 let createServer = function (callback, port, hostName) {
     let option = {
         cert: fs.readFileSync(
-            isDev ? './ssl/127.0.0.1+2.pem' : '/etc/nginx/conf.d/imyoyo.xyz_nginx/imyoyo.xyz_bundle.crt',
+            isDev ? './ssl/127.0.0.1+2.pem' : '/usr/local/nginx/conf/conf.d/imyoyo.xyz_nginx/imyoyo.xyz_bundle.crt',
         ),
-        key: fs.readFileSync(isDev ? './ssl/127.0.0.1+2-key.pem' : '/etc/nginx/conf.d/imyoyo.xyz_nginx/imyoyo.xyz.key'),
+        key: fs.readFileSync(isDev ? './ssl/127.0.0.1+2-key.pem' : '/usr/local/nginx/conf/conf.d/imyoyo.xyz_nginx/imyoyo.xyz.key'),
     };
     const server = https.createServer(option, callback);
     server.listen(port, hostName);
