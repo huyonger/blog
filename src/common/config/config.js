@@ -8,7 +8,9 @@ let createServer = function (callback, port, hostName) {
         cert: fs.readFileSync(
             isDev ? './ssl/127.0.0.1+2.pem' : '/usr/local/nginx/conf/conf.d/imyoyo.xyz_nginx/imyoyo.xyz_bundle.crt',
         ),
-        key: fs.readFileSync(isDev ? './ssl/127.0.0.1+2-key.pem' : '/usr/local/nginx/conf/conf.d/imyoyo.xyz_nginx/imyoyo.xyz.key'),
+        key: fs.readFileSync(
+            isDev ? './ssl/127.0.0.1+2-key.pem' : '/usr/local/nginx/conf/conf.d/imyoyo.xyz_nginx/imyoyo.xyz.key',
+        ),
     };
     const server = https.createServer(option, callback);
     server.listen(port, hostName);
