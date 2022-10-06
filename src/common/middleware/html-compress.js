@@ -4,9 +4,11 @@ var { parse } = require('node-html-parser');
 module.exports = (opts, app) => {
     return (ctx, next) => {
         return next().then(() => {
-            let content = ctx.body;
-            // let root = parse(content);
-            ctx.body = compressHTML(content);
+            if (ctx.response.get('content-type').startsWith('text/html')) {
+                let content = ctx.body;
+                // let root = parse(content);
+                ctx.body = compressHTML(content);
+            }
         });
     };
 };
