@@ -30,7 +30,9 @@ function compressHTML(content) {
     content = content.replace(/<\/(html|body|colgroup|thead|tr|tbody|td|p|dt|dd|li|option|tfoot)>/g, '');
     // 3.删除特定only_name属性
     content = content.replace(/(disable|selected|checked|readonly|multiple)/g, '');
-    // 4.删除空格、制表符、换行符
+    // 4.开启无CSS模式
+    // content = content.replace(/(<link.*rel=["\']?stylesheet["\']?.*?>)/g, '');
+    // 5.删除空格、制表符、换行符
     // content = content.replace(/\n|\r|\t/g, '');
     return content;
 }
